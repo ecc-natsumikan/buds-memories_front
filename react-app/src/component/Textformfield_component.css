@@ -1,0 +1,13 @@
+.textformfield_component {
+    border: 6px solid #F1D15D;
+    text-align: center; /* プレースホルダーの文字を中央に配置 */
+    height: 5vh; /* 高さを指定して文字が見切れないようにする */
+    width: 30vw;
+    font-size: 8%; /* 入力テキストのフォントサイズを指定 */
+    
+  }
+  
+  .textformfield_component::placeholder {
+    text-align: center;
+    font-size: 16px;
+}
