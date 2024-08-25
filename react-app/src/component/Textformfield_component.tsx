@@ -2,14 +2,14 @@ import React from "react";
 import './Textformfield_component.css';
 
 //プロパティの型宣言
-interface TextFormFieldPrpos{
+interface TextFormFieldPropos{
     type: string;
     placeholder: string;
     value:string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const TextFormField:React.FC<TextFormFieldPrpos> = ({ type, placeholder, value, onChange }) => {
+const TextFormField:React.FC<TextFormFieldPropos> = ({ type, placeholder, value, onChange }) => {
   return (
     <input
       type={type}
