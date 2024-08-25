@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
-h2{
+h1{
     font-family: 'Zen Maru Gothic', sans-serif;
     font-weight: bold;
 }
@@ -20,8 +20,9 @@ h2{
     display: flex;
     border: 8px, solid #F4A16D;
     padding: 3vw 5vh;
-    min-height: 40vh;
+    min-height: 50vh;
     max-height: 70vh;
+    height: 70vh;
     max-width: 80vw;
     min-width: 40vw;
     flex-direction: column;
