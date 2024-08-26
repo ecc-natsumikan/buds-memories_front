@@ -5,13 +5,15 @@
     align-items: center;
     height: 100vh;
 }
+
 .logo {
     width: 40%;
     /* min-width: 20%; */
     height: auto;
 
 }
-.form-container{
+
+.form-container {
     display: flex;
     border: 8px, solid #F4A16D;
     padding: 3vw 5vh;
@@ -24,7 +26,16 @@
     align-items: center;
     justify-content: center;
 }
-.form-container h2{
-    margin-bottom: -vh; /* 下に余白を削る */
-   
+
+.form-container h2 {
+    margin-bottom: -vh;
+    /* 下に余白を削る */
+
+}
+
+/* 既存のスタイルに追加します */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
 }

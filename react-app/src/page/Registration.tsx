@@ -5,7 +5,13 @@ import "./Registration.css";
 // ボタンの処理のために追加した。
 import { useNavigate } from "react-router-dom";
 import NextButton from "../component/NextButton";
-import {validateName,validatePhoneNumber,validatePassword,validateEmail,validateBirthday,} from "../lib/api/validateFields";
+import {
+  validateName,
+  validatePhoneNumber,
+  validatePassword,
+  validateEmail,
+  validateBirthday,
+} from "../lib/api/validateFields";
 
 const Registration = () => {
   const navigate = useNavigate();
@@ -15,11 +21,31 @@ const Registration = () => {
   const [email, setEmail] = useState("");
   const [birthday, setBirthday] = useState("");
 
+  const [errors, setErrors] = useState({
+    name: "",
+    phoneNumber: "",
+    password: "",
+    email: "",
+    birthday: "",
+  });
+
   const handleNextClick = () => {
-    if (validateName(name) && validatePhoneNumber(phoneNumber) && validatePassword(password)) {
-        navigate("/nextPage"); // 成功時に次のページへ遷移
+    const nameError = validateName(name);
+    const phoneNumberError = validatePhoneNumber(phoneNumber);
+    const passwordError = validatePassword(password);
+    const emailError = validateEmail(email);
+    const birthdayError = validateBirthday(birthday) ? null : "2000-01-01のように入力してください。";
+
+    if (nameError || phoneNumberError || passwordError || emailError) {
+      setErrors({
+        name: nameError || "",
+        phoneNumber: phoneNumberError || "",
+        password: passwordError || "",
+        email: emailError || "",
+        birthday: birthdayError || "",
+      });
     } else {
-        alert("必須項目に誤りがあります。");
+      navigate("/nextPage");
     }
   };
 
@@ -30,43 +56,38 @@ const Registration = () => {
         <h2>新規アカウント作成</h2>
         <TextFormField
           type={"text"}
-          placeholder={"ユーザー名(必須）"}
-          //   value={""}
-          //   onChange={function (e: React.ChangeEvent<HTMLInputElement>): void {}}
+          placeholder={"* ユーザー名"}
           value={name}
           onChange={(e) => setName(e.target.value)}
+          error={errors.name}
         />
         <TextFormField
           type={"text"}
-          placeholder={"電話番号(必須）"}
-          //   value={""}
-          //   onChange={function (e: React.ChangeEvent<HTMLInputElement>): void {}}
+          placeholder={"* 電話番号"}
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
+          error={errors.phoneNumber}
         />
         <TextFormField
-          type={"text"}
-          placeholder={"パスワード（必須）"}
-          //   value={""}
-          //   onChange={function (e: React.ChangeEvent<HTMLInputElement>): void {}}
+          type={"password"}
+          placeholder={"* パスワード６文字以上"}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          error={errors.password}
         />
         <TextFormField
           type={"text"}
-          placeholder={"メールアドレス（任意）"}
-          //   value={""}
-          //   onChange={function (e: React.ChangeEvent<HTMLInputElement>): void {}}
+          placeholder={"メールアドレス"}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          error={errors.email}
         />
         <TextFormField
           type={"text"}
-          placeholder={"生年月日(必須ではない）"}
-          //   value={""}
-          //   onChange={function (e: React.ChangeEvent<HTMLInputElement>): void {}}
+          placeholder={"生年月日(例：2000-01-01）"}
           value={birthday}
           onChange={(e) => setBirthday(e.target.value)}
+          error={errors.birthday}
         />
         <NextButton onClick={handleNextClick} label="次へ" />
       </div>

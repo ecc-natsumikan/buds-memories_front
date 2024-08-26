@@ -1,17 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+
 .textformfield_component {
-    border: 6px solid #F1D15D;
-    text-align: center; /* プレースホルダーの文字を中央に配置 */
-    height: 5vh; /* 高さを指定して文字が見切れないようにする */
-    width: 30vw;
-    font-size: 20px; /* 入力テキストのフォントサイズを指定 */
-    
-  }
-  
-  .textformfield_component::placeholder {
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Zen Maru Gothic', sans-serif;
-    color: black;
-    font-weight: bold;
+  border: 6px solid #F1D15D;
+  text-align: center;
+  /* プレースホルダーの文字を中央に配置 */
+  height: 5vh;
+  /* 高さを指定して文字が見切れないようにする */
+  width: 30vw;
+  font-size: 20px;
+  /* 入力テキストのフォントサイズを指定 */
+
+}
+
+.textformfield_component::placeholder {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  color: black;
+  font-weight: bold;
+}
+
+.textformfield_wrapper {
+  margin-bottom: 20px;
+  /* フィールドごとの間隔 */
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
 }
