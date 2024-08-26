@@ -63,7 +63,7 @@ const Registration = () => {
         />
         <TextFormField
           type={"text"}
-          placeholder={"* 電話番号"}
+          placeholder={"* 電話番号（ハイフンなし）"}
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
           error={errors.phoneNumber}
