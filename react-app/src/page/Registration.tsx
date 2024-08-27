@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LogoImage from "../image/ロゴ.png";
 import TextFormField from "../component/Textformfield_component";
 import "./Registration.css";
 // ボタンの処理のために追加した。
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import NextButton from "../component/NextButton";
 import {
   validateName,
@@ -13,8 +13,9 @@ import {
   validateBirthday,
 } from "../lib/api/validateFields";
 
-const Registration = () => {
+const Registration: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
@@ -28,6 +29,18 @@ const Registration = () => {
     email: "",
     birthday: "",
   });
+
+  useEffect(() => {
+    if (location.state) {
+      console.log("Received state:", location.state); // デバッグ用のログ
+      const { name, phoneNumber, password, email, birthday } = location.state;
+      setName(name || "");
+      setPhoneNumber(phoneNumber || "");
+      setPassword(password || "");
+      setEmail(email || "");
+      setBirthday(birthday || "");
+    }
+  }, [location.state]);
 
   const handleNextClick = () => {
     const nameError = validateName(name);
@@ -45,7 +58,8 @@ const Registration = () => {
         birthday: birthdayError || "",
       });
     } else {
-      navigate("/nextPage");
+      console.log("Navigating with state:", { name, phoneNumber, password, email, birthday }); // 送信される状態をログ出力
+      navigate("/ProfilePictureUpload", { state: { name, phoneNumber, password, email, birthday } });
     }
   };
 
