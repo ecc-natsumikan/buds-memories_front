@@ -1,0 +1,74 @@
+/* Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+
+.Container {
+    display: flex;
+    height: 100vh; /* ビューポートの高さに合わせる */
+    align-items: flex-start; /* コンテンツを上に寄せる */
+    padding-left: 170px; /* サイドバーの幅に合わせて余白を追加 */
+}
+
+.Itemcontainer {
+    /* 残りのスペースを占める */
+    padding: 20px;
+    flex: 1; /* 残りのスペースを占める */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4vh;  /*要素の余白 */
+}
+
+.Tagcontainer {
+    background-color: #F6E091;
+    height: auto;
+    width: 60vw;
+    color: #000;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    display: flex;
+    flex-direction: column; /* 見出し（h2）は上部に縦配置されます */
+    align-items: flex-start; /* 左揃えにする */
+    justify-content: flex-start;
+    padding-left: 2vw;
+    padding-bottom: 3vh;
+    box-sizing: border-box; /* パディングが幅に含まれるようにする */
+}
+
+
+.Tagcontainer .tags {
+    display: flex; /* タグを横方向に並べる */
+    gap: 3vw; /* タグ間の余白を追加 */
+    flex-wrap: wrap; /* タグが画面幅を超えた場合に折り返す */
+    justify-content: flex-start; /* 左揃えにする */
+
+}
+
+
+.Questcontainer{
+    background-color: #F6E091;
+    height: auto;
+    width: 60vw;
+    color: #000;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    display: flex;
+    flex-direction: column; /* 見出し（h2）は上部に縦配置されます */
+    align-items: flex-start; /* 左揃えにする */
+    justify-content: flex-start;
+    padding-left: 2vw;
+    padding-bottom: 3vh;
+    box-sizing: border-box; /* パディングが幅に含まれるようにする */
+}
+.Badgecontainer{
+    background-color: #F6E091;
+    height: auto;
+    width: 60vw;
+    color: #000;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    display: flex;
+    flex-direction: column; /* 見出し（h2）は上部に縦配置されます */
+    align-items: flex-start; /* 左揃えにする */
+    justify-content: flex-start;
+    padding-left: 2vw;
+    padding-bottom: 3vh;
+    box-sizing: border-box; /* パディングが幅に含まれるようにする */
+}
