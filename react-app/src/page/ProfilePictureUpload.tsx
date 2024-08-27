@@ -7,15 +7,15 @@ const ProfilePictureUpload: React.FC = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    // useEffect(() => {
-    //     if (location.state) {
-    //         console.log("Received state in ProfilePictureUpload:", location.state); // 受け取った状態をログ出力
-    //     } else {
-    //         console.log("No state received in ProfilePictureUpload.");
-    //     }
-    // }, [location.state]);
-
     const { name, phoneNumber, password, email, birthday } = location.state || {};
+
+    useEffect(() => {
+        if (location.state) {
+            console.log("Received state in ProfilePictureUpload:", location.state);
+        } else {
+            console.log("No state received in ProfilePictureUpload.");
+        }
+    }, [location.state]);
 
     const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files.length > 0) {
@@ -33,7 +33,7 @@ const ProfilePictureUpload: React.FC = () => {
     };
 
     const handleConfirmClick = () => {
-        navigate('/Confirm'); // 確認画面へ遷移します（まだ作成されていないことは把握しています）
+        navigate('/Confirm', { state: { name, phoneNumber, password, email, birthday, selectedImage } });
     };
 
     return (
