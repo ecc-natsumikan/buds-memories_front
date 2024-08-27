@@ -32,7 +32,7 @@ const Registration: React.FC = () => {
 
   useEffect(() => {
     if (location.state) {
-      console.log("Received state:", location.state); // デバッグ用のログ
+      // console.log("Received state:", location.state); // デバッグ用のログ
       const { name, phoneNumber, password, email, birthday } = location.state;
       setName(name || "");
       setPhoneNumber(phoneNumber || "");
@@ -58,7 +58,7 @@ const Registration: React.FC = () => {
         birthday: birthdayError || "",
       });
     } else {
-      console.log("Navigating with state:", { name, phoneNumber, password, email, birthday }); // 送信される状態をログ出力
+      // console.log("Navigating with state:", { name, phoneNumber, password, email, birthday }); // 送信される状態をログ出力
       navigate("/ProfilePictureUpload", { state: { name, phoneNumber, password, email, birthday } });
     }
   };

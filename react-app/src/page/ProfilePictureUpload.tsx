@@ -10,10 +10,8 @@ const ProfilePictureUpload: React.FC = () => {
     const { name, phoneNumber, password, email, birthday } = location.state || {};
 
     useEffect(() => {
-        if (location.state) {
-            console.log("Received state in ProfilePictureUpload:", location.state);
-        } else {
-            console.log("No state received in ProfilePictureUpload.");
+        if (location.state && location.state.selectedImage) {
+            setSelectedImage(location.state.selectedImage);
         }
     }, [location.state]);
 

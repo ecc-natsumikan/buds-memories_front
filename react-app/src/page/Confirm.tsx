@@ -8,7 +8,7 @@ const Confirm: React.FC = () => {
     const { name, phoneNumber, password, email, birthday, selectedImage } = location.state || {};
 
     const handleBackClick = () => {
-        navigate(-1);
+        navigate('/ProfilePictureUpload', { state: { name, phoneNumber, password, email, birthday, selectedImage } });
     };
 
     const handleSubmitClick = () => {
