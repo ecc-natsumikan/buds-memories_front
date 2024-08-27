@@ -3,7 +3,7 @@
 .tag {
     background-color: #F4853B;
     color: white;
-
+    padding: 0.5em 1em; /* 内側に余白を追加することで、コンテンツに応じてサイズが変わる */
     text-align: center; /* 横方向の中央揃え */
     border-radius: 8%;
     display: inline-flex; /* Flexboxを有効にし、インライン要素として扱う */
