@@ -1,7 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+.QuestContainer {
+    display: flex;
+    align-items: center;  /* 縦方向の中央揃え */
+    justify-content: space-between;  /* 要素間のスペースを調整 */
+      /* クエスト内容と進捗バーの間に余白を追加 */
+    width: 100%;
+}
 
-.Questlist{
+.Questlist {
     font-family: 'Zen Maru Gothic', sans-serif;
     font-weight: bold;
-    
+    font-size: medium;
+    width: auto;  /* コンテンツに合わせて幅を調整 */
+}
+
+.ProgressWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;  /* プログレスバーの幅と一致させる */
+    margin-right: 3vw;
+    margin-bottom: 2vh;
+}
+
+.ProgressLabels {
+    display: flex;
+    justify-content: space-between;  /* 左と右にテキストを配置 */
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 14px;
+    width: 100%;  /* プログレスバーに合わせて幅を設定 */
 }
