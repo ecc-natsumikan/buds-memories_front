@@ -49,6 +49,9 @@ const Registration: React.FC = () => {
     const emailError = validateEmail(email);
     const birthdayError = validateBirthday(birthday) ? null : "2000-01-01のように入力してください。";
 
+    const emailValue = email === "" ? "メールアドレス未入力" : email;
+    const birthdayValue = birthday === "" ? "誕生日未入力" : birthday;
+
     if (nameError || phoneNumberError || passwordError || emailError) {
       setErrors({
         name: nameError || "",
@@ -59,7 +62,7 @@ const Registration: React.FC = () => {
       });
     } else {
       // console.log("Navigating with state:", { name, phoneNumber, password, email, birthday }); // 送信される状態をログ出力
-      navigate("/ProfilePictureUpload", { state: { name, phoneNumber, password, email, birthday } });
+      navigate("/ProfilePictureUpload", { state: { name, phoneNumber, password, email: emailValue, birthday: birthdayValue } });
     }
   };
 

@@ -1,46 +1,79 @@
 .confirm-container {
+    max-width: 1000px;
+    margin: 50px auto;
     padding: 20px;
-    max-width: 500px;
-    margin: auto;
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.confirm-container h2 {
-    text-align: center;
+.confirm-title {
+    margin-bottom: 40px;
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #F08A00;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.confirm-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-.confirm-container p {
-    font-size: 16px;
-    margin: 10px 0;
+.profile-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
 }
 
-.profile-preview {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
+.profile-image {
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
+}
+
+.confirm-details {
+    flex: 1;
+    text-align: center;
+    margin-left: -100px;
+}
+
+.confirm-detail {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.confirm-value {
+    font-size: 18px;
+    color: #333;
+    flex: 2;
+    text-align: center;
+    border: 2px solid #F4CE5E;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    max-width: 250px; /* 横幅を小さく */
 }
 
 .button-group {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 20px;
 }
 
 .back-button, .submit-button {
-    padding: 10px 20px;
+    padding: 10px 30px;
+    font-size: 18px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
     cursor: pointer;
-}
-
-.back-button {
-    background-color: #ccc;
+    background-color: #F4CE5E;
     color: #333;
+    min-width: 150px;
 }
 
 .submit-button {

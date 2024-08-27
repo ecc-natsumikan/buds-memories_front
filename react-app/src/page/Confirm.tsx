@@ -18,13 +18,29 @@ const Confirm: React.FC = () => {
 
     return (
         <div className="confirm-container">
-            <h2>入力内容の確認</h2>
-            <p>ユーザー名: {name}</p>
-            <p>電話番号: {phoneNumber}</p>
-            <p>パスワード: {password}</p>
-            <p>メールアドレス: {email}</p>
-            <p>生年月日: {birthday}</p>
-            {selectedImage && <img src={selectedImage} alt="Profile" className="profile-preview" />}
+            <h2 className="confirm-title">プロフィールの確認</h2>
+            <div className="confirm-content">
+                <div className="profile-image-container">
+                    {selectedImage && <img src={selectedImage} alt="Profile" className="profile-image" />}
+                </div>
+                <div className="confirm-details">
+                    <div className="confirm-detail">
+                        <span className="confirm-value">{name}</span>
+                    </div>
+                    <div className="confirm-detail">
+                        <span className="confirm-value">{phoneNumber}</span>
+                    </div>
+                    <div className="confirm-detail">
+                        <span className="confirm-value">{password}</span>
+                    </div>
+                    <div className="confirm-detail">
+                        <span className="confirm-value">{email}</span>
+                    </div>
+                    <div className="confirm-detail">
+                        <span className="confirm-value">{birthday}</span>
+                    </div>
+                </div>
+            </div>
             <div className="button-group">
                 <button onClick={handleBackClick} className="back-button">戻る</button>
                 <button onClick={handleSubmitClick} className="submit-button">登録</button>
