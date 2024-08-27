@@ -9,7 +9,6 @@
     margin-bottom: 40px;
     font-size: 24px;
     color: #333;
-    border-bottom: 2px solid #F08A00;
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -32,7 +31,6 @@
 .profile-image {
     width: 350px;
     height: 350px;
-    border-radius: 50%;
 }
 
 .confirm-details {
@@ -56,7 +54,7 @@
     padding: 10px;
     border-radius: 10px;
     background-color: transparent;
-    max-width: 250px; /* 横幅を小さく */
+    max-width: 250px;
 }
 
 .button-group {

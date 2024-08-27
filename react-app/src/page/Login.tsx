@@ -29,7 +29,7 @@ const Login = () => {
         password: passwordError || "",
       });
     } else {
-      navigate("/nextPage"); // 成功時に次のページへ遷移
+      navigate("/nextPage");
     }
   };
 
@@ -66,13 +66,6 @@ const Login = () => {
           </Link>
         </div>
       </div>
-      {/* <LogInButton onClick={handleNextClick} label="ログイン" />
-      <div className="signup-link">
-        <span className="signup-text">新規アカウント作成は</span>
-        <Link to="/Registration">
-          <span className="link-text">こちら</span>
-        </Link>
-      </div> */}
     </div>
   );
 };

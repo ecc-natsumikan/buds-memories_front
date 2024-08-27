@@ -1,6 +1,7 @@
 import React, { useState, useEffect  } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './ProfilePictureUpload.css';
+import defaultImage from '../image/default.png';
 
 const ProfilePictureUpload: React.FC = () => {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -31,17 +32,19 @@ const ProfilePictureUpload: React.FC = () => {
     };
 
     const handleConfirmClick = () => {
-        navigate('/Confirm', { state: { name, phoneNumber, password, email, birthday, selectedImage } });
+        const imageToPass = selectedImage || defaultImage;
+        navigate('/Confirm', { state: { name, phoneNumber, password, email, birthday, selectedImage: imageToPass } });
     };
 
     return (
         <div className="profile-container">
             <h2>プロフィール写真のアップロード</h2>
-            {selectedImage && <img src={selectedImage} alt="Preview" className="image-preview" />}
-            <input type="file" accept="image/*" onChange={handleImageChange} />
+            <img src={selectedImage || defaultImage} alt="Profile" className="image-preview" />
+            <label htmlFor="imageUpload" className="upload-button">写真をアップロード</label>
+            <input id="imageUpload" type="file" accept="image/*" onChange={handleImageChange} />
             <div className="button-group">
                 <button onClick={handleBackClick} className="back-button">戻る</button>
-                <button onClick={handleConfirmClick} className="confirm-button">確認</button>
+                <button onClick={handleConfirmClick} className="confirm-button">次へ</button>
             </div>
         </div>
     );

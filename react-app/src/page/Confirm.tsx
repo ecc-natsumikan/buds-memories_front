@@ -12,7 +12,6 @@ const Confirm: React.FC = () => {
     };
 
     const handleSubmitClick = () => {
-        // ここでサーバーにデータを送信する処理を実装できます
         console.log("Submitting data:", { name, phoneNumber, password, email, birthday, selectedImage });
     };
 
