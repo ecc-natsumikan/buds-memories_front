@@ -13,6 +13,7 @@ const Confirm: React.FC = () => {
 
     const handleSubmitClick = () => {
         console.log("Submitting data:", { name, phoneNumber, password, email, birthday, selectedImage });
+        navigate('/Complete', { state: { name, phoneNumber, password, email, birthday, selectedImage } });
     };
 
     return (
