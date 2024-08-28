@@ -47,7 +47,9 @@ const Registration: React.FC = () => {
     const phoneNumberError = validatePhoneNumber(phoneNumber);
     const passwordError = validatePassword(password);
     const emailError = validateEmail(email);
-    const birthdayError = validateBirthday(birthday) ? null : "2000-01-01のように入力してください。";
+    const birthdayError = validateBirthday(birthday)
+      ? null
+      : "2000-01-01のように入力してください。";
 
     const emailValue = email === "" ? "メールアドレス未入力" : email;
     const birthdayValue = birthday === "" ? "誕生日未入力" : birthday;
@@ -62,7 +64,15 @@ const Registration: React.FC = () => {
       });
     } else {
       // console.log("Navigating with state:", { name, phoneNumber, password, email, birthday }); // 送信される状態をログ出力
-      navigate("/ProfilePictureUpload", { state: { name, phoneNumber, password, email: emailValue, birthday: birthdayValue } });
+      navigate("/ProfilePictureUpload", {
+        state: {
+          name,
+          phoneNumber,
+          password,
+          email: emailValue,
+          birthday: birthdayValue,
+        },
+      });
     }
   };
 
@@ -71,41 +81,57 @@ const Registration: React.FC = () => {
       <img src={LogoImage} className="logo" />
       <div className="form-container">
         <h2>新規アカウント作成</h2>
-        <TextFormField
-          type={"text"}
-          placeholder={"* ユーザー名"}
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          error={errors.name}
-        />
-        <TextFormField
-          type={"text"}
-          placeholder={"* 電話番号（ハイフンなし）"}
-          value={phoneNumber}
-          onChange={(e) => setPhoneNumber(e.target.value)}
-          error={errors.phoneNumber}
-        />
-        <TextFormField
-          type={"password"}
-          placeholder={"* パスワード６文字以上"}
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          error={errors.password}
-        />
-        <TextFormField
-          type={"text"}
-          placeholder={"メールアドレス"}
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          error={errors.email}
-        />
-        <TextFormField
-          type={"text"}
-          placeholder={"生年月日(例：2000-01-01）"}
-          value={birthday}
-          onChange={(e) => setBirthday(e.target.value)}
-          error={errors.birthday}
-        />
+        <div className="text-field-container">
+          <TextFormField
+            type={"text"}
+            placeholder={"* ユーザー名"}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          {errors.name && <div className="error-message">{errors.name}</div>}
+        </div>
+        <div className="text-field-container">
+          <TextFormField
+            type={"text"}
+            placeholder={"* 電話番号（ハイフンなし）"}
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+          />
+          {errors.phoneNumber && (
+            <div className="error-message">{errors.phoneNumber}</div>
+          )}
+        </div>
+        <div className="text-field-container">
+          <TextFormField
+            type={"password"}
+            placeholder={"* パスワード６文字以上"}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          {errors.password && (
+            <div className="error-message">{errors.password}</div>
+          )}
+        </div>
+        <div className="text-field-container">
+          <TextFormField
+            type={"text"}
+            placeholder={"メールアドレス"}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          {errors.email && <div className="error-message">{errors.email}</div>}
+        </div>
+        <div className="text-field-container">
+          <TextFormField
+            type={"text"}
+            placeholder={"生年月日(例：2000-01-01）"}
+            value={birthday}
+            onChange={(e) => setBirthday(e.target.value)}
+          />
+          {errors.birthday && (
+            <div className="error-message">{errors.birthday}</div>
+          )}
+        </div>
         <NextButton onClick={handleNextClick} label="次へ" />
       </div>
     </div>

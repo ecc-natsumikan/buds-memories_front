@@ -37,26 +37,33 @@ const Login = () => {
     <div className="container">
       <img src={LogoImage} className="logo" />
       <div className="form-container">
-        <h1>ログイン</h1>
-        <TextFormField
-          type={"text"}
-          placeholder={"電話番号(ハイフンなし)/メールアドレス"}
-          value={telEmail}
-          onChange={(e) => setTelEmail(e.target.value)}
-        />
-        {errors.telEmail && (
-          <div className="error-message">{errors.telEmail}</div>
-        )}
 
-        <TextFormField
-          type={"password"}
-          placeholder={"パスワード"}
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        {errors.password && (
-          <div className="error-message">{errors.password}</div>
-        )}
+        <h1>ログイン</h1>
+
+        <div className="text-field-container">
+          <TextFormField
+            type={"text"}
+            placeholder={"電話番号(ハイフンなし)/メールアドレス"}
+            value={telEmail}
+            onChange={(e) => setTelEmail(e.target.value)}
+          />
+          {errors.telEmail && (
+            <div className="error-message">{errors.telEmail}</div>
+          )}
+        </div>
+
+        <div className="text-field-container">
+          <TextFormField
+            type={"password"}
+            placeholder={"パスワード"}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          {errors.password && (
+            <div className="error-message">{errors.password}</div>
+          )}
+        </div>
+
         <LogInButton onClick={handleNextClick} label="ログイン" />
 
         <div className="signup-link">
