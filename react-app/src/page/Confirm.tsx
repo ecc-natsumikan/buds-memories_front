@@ -42,6 +42,7 @@ const Confirm: React.FC = () => {
             </div>
             <div className="button-group">
                 <button onClick={handleBackClick} className="back-button">戻る</button>
+                <h3>　</h3>
                 <button onClick={handleSubmitClick} className="submit-button">登録</button>
             </div>
         </div>

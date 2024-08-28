@@ -38,12 +38,13 @@ const ProfilePictureUpload: React.FC = () => {
 
     return (
         <div className="profile-container">
-            <h2>プロフィール写真のアップロード</h2>
+            <h2>プロフィール画像の変更</h2>
             <img src={selectedImage || defaultImage} alt="Profile" className="image-preview" />
             <label htmlFor="imageUpload" className="upload-button">写真をアップロード</label>
             <input id="imageUpload" type="file" accept="image/*" onChange={handleImageChange} />
             <div className="button-group">
                 <button onClick={handleBackClick} className="back-button">戻る</button>
+                <h3>　</h3>
                 <button onClick={handleConfirmClick} className="confirm-button">次へ</button>
             </div>
         </div>
