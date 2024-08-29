@@ -20,6 +20,7 @@
     border-radius: 20px;
     width: 30vw;
     height: 90vh;
+    gap: 30px;
 }
 
 .form-container h2 {

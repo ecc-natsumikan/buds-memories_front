@@ -80,7 +80,7 @@ const Registration: React.FC = () => {
     <div className="container">
       <img src={LogoImage} className="logo" />
       <div className="form-container">
-        <h2>新規アカウント作成</h2>
+      <h2>新規アカウント作成</h2>
         <div className="text-field-container">
           <TextFormField
             type={"text"}
