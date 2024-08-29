@@ -1,0 +1,90 @@
+.confirm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.confirm-title {
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: #333;
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+.confirm-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 70%;
+}
+
+.profile-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.confirm-details {
+    flex: 1;
+    text-align: center;
+    margin-left: 0px;
+}
+
+.confirm-detail {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.confirm-value {
+    font-size: 18px;
+    color: #333;
+    flex: 2;
+    text-align: center;
+    border: 2px solid #F4CE5E;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    max-width: 250px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.back-button {
+    background-color: #f4d03f;
+    color: #000000;
+    padding: 10px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    background-color: #f4d03f;
+    color: #000000;
+    padding: 10px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

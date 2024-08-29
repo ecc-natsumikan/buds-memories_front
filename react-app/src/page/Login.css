@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+
+h1 {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: bold;
+}
+
+.container {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo {
+    width: 40%;
+    height: auto;
+}
+
+.form-container {
+    display: flex;
+    padding: 3vw 5vh;
+    min-height: 50vh;
+    max-height: 70vh;
+    height: 70vh;
+    max-width: 80vw;
+    min-width: 40vw;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-link a {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    text-decoration: none;
+}
+
+.link-text {
+    color: #F4A16D;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 1px;
+}
+
+.text-field-container {
+    /* margin-bottom: 15px; */
+    position: relative;
+}
+
+.login-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #f0c040;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
