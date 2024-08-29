@@ -12,7 +12,5 @@
     font-family: 'Zen Maru Gothic', sans-serif;
     font-weight: bold;
     font-size: 1rem; /* フォントサイズを調整 */
-    min-width: 5vw; /* 最小幅を設定 */
-    min-height: 4vh; /* 最小高さを設定 */
     white-space: nowrap; /* 改行を無効にしてテキストが折り返されないようにする */
 }
