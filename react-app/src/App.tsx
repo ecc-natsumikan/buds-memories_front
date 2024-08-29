@@ -6,6 +6,8 @@ import Registration from "./page/Registration";
 import ProfilePictureUpload from "./page/ProfilePictureUpload"
 import Confirm from './page/Confirm';
 import Complete from "./page/Complete";
+import ChangeProfile from "./page/ChangeProfile";
+import ChangeComplete from "./page/ChangeComplete"
 
 const App: React.FC = () => {
   return(
@@ -15,6 +17,8 @@ const App: React.FC = () => {
       <Route path="/ProfilePictureUpload" element={<ProfilePictureUpload/>} />
       <Route path="/Confirm" element={<Confirm/>} />
       <Route path="/Complete" element={<Complete/>}/>
+      <Route path="/ChangeProfile" element={<ChangeProfile/>}/>
+      <Route path="/ChangeComplete" element={<ChangeComplete/>}/>
     </Routes>
   );
 }
