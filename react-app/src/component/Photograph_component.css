@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+
+.imageListItem{
+    position: relative;
+    overflow: hidden;
+}
+.imageListItem img{
+    width: 100%;
+    height: 100%;
+}
+.imageListItemBar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.dialog .title{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #F4853B;
+    text-decoration-thickness: 3px; /* 下線の太さ */
+    text-underline-offset: 7px;
+    padding-bottom: 20px;
+}
+.dialog .text{
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+}
+.dialog .tagname{
+    font-family:'Zen Maru Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: #F4853B;
+    text-decoration-thickness: 3px; /* 下線の太さ */
+    text-underline-offset: 7px;
+    padding-bottom: 10px;
+}
+.dialog.tag{
+
+}
