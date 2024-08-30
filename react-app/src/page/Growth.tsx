@@ -5,7 +5,7 @@ import LogoImage from "../image/ロゴ.png";
 import './Growth.css';
 import Photograph from '../component/Photograph_component'; // 正しいインポート
 
-// GrowthPropsの型定義
+// GrowthPropsの型定義ああ
 interface GrowthProps {
     tagtitle: string;
     tagimage: string;

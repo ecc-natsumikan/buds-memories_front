@@ -5,7 +5,7 @@
     display: flex;
     height: 100vh; /* ビューポートの高さに合わせる */
     align-items: flex-start; /* コンテンツを上に寄せる */
-    padding-left: 170px; /* サイドバーの幅に合わせて余白を追加 */
+    padding-left: 170px; /* サイドバーの幅に合わせて余白を追加 ああ*/
 }
 
 .Itemcontainer {

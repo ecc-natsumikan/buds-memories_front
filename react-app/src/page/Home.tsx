@@ -4,7 +4,7 @@ import './Home.css';
 import TagComponent from "../component/Tag_component";
 import Quest from "../component/Quest_component";
 import Badge from "../component/Badge_component";
-import { Grid,} from "@mui/material"; // Gridをインポート
+import { Grid,} from "@mui/material"; // Gridをインポートああ
 import React from "react";
 import { Box, Typography } from '@mui/material';
 import Photograph from "../component/Photograph_component";
