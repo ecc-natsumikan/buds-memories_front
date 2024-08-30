@@ -44,6 +44,17 @@
     text-underline-offset: 7px;
     padding-bottom: 10px;
 }
-.dialog.tag{
-
+.dialog .tag{
+    background-color: #F4853B;
+    color: white;
+    padding: 0.5em 1em; /* 内側に余白を追加することで、コンテンツに応じてサイズが変わる */
+    text-align: center; /* 横方向の中央揃え */
+    border-radius: 8%;
+    display: inline-flex; /* Flexboxを有効にし、インライン要素として扱う */
+    align-items: center; /* 縦方向の中央揃え */
+    justify-content: center; /* 横方向の中央揃え */
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 1rem; /* フォントサイズを調整 */
+    white-space: nowrap; /* 改行を無効にしてテキストが折り返されないようにする */
 }

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -6,9 +6,11 @@ import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
+import FavoriteIcon from '@mui/icons-material/Favorite'; // 追加
 import { ImageListItem, ImageListItemBar } from "@mui/material";
 import { Box } from '@mui/material';
 import './Photograph_component.css';
+
 interface ImageData {
   img: string;
   title: string;
@@ -24,6 +26,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 
 const Photograph: React.FC<ImageData> = ({ img, title, tag, text }) => {
   const [open, setOpen] = React.useState(false);
+  const [liked, setLiked] = useState(false); // いいね状態管理
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -31,6 +34,10 @@ const Photograph: React.FC<ImageData> = ({ img, title, tag, text }) => {
 
   const handleClickClose = () => {
     setOpen(false);
+  };
+
+  const handleLike = () => {
+    setLiked(!liked); // いいね状態をトグル
   };
 
   return (
@@ -53,8 +60,8 @@ const Photograph: React.FC<ImageData> = ({ img, title, tag, text }) => {
         PaperProps={{
           style: {
             width: '100%', // ダイアログの幅を指定
-            height:'45%',
-            backgroundColor:'#FFEEB2'
+            height: '45%',
+            backgroundColor: '#FFEEB2'
           },
         }}
       >
@@ -81,40 +88,49 @@ const Photograph: React.FC<ImageData> = ({ img, title, tag, text }) => {
           </IconButton>
         </DialogTitle>
         <DialogContent dividers className='dialog'>
-            <Box display='flex' sx={{paddingTop:'7vh',}}>
-              <img
-                src={img}
-                alt={title}
-                style={{ 
-                  maxWidth: '50%', 
-                  maxHeight: '50%', 
-                  borderRadius: 4, 
-                }}
-              />
-              <Box ml={2}></Box>
-              <Box  textAlign='center' justifyContent={'center'}  width={'100%'}  >
-                <Typography variant="h6" className='title' >
-                  {title}
-                </Typography>
-                
-                <Typography className='text' sx={{ wordBreak: 'break-word' }}>
-                  {text}
-                </Typography>
-                <Typography className='tagname'>
-                  タグ
-                </Typography>
-                <Box display="flex" flexWrap="wrap" gap={1} justifyContent="center">
-                  {tag.map((tags, index) => (
-                    <Typography 
-                      key={index} 
-                      className='tag'
-                    >
-                      {tags}
-                    </Typography>
-                  ))}
-                </Box>
+          <Box display='flex' sx={{ paddingTop: '7vh' }}>
+            <img
+              src={img}
+              alt={title}
+              style={{ 
+                maxWidth: '50%', 
+                maxHeight: '50%', 
+                borderRadius: 4, 
+              }}
+            />
+            <Box ml={2}></Box>
+            <Box textAlign='center' justifyContent={'center'} width={'100%'}>
+              <Typography variant="h6" className='title'>
+                {title}
+              </Typography>
+              <Typography className='text' sx={{ wordBreak: 'break-word' }}>
+                {text}
+              </Typography>
+              <Typography className='tagname'>
+                タグ
+              </Typography>
+              <Box display="flex" flexWrap="wrap" gap={1} justifyContent="center">
+                {tag.map((tags, index) => (
+                  <Typography 
+                    key={index} 
+                    className='tag'
+                  >
+                    {tags}
+                  </Typography>
+                ))}
+              </Box>
+              {/* いいねボタンを追加 */}
+              <Box mt={2}>
+                <IconButton 
+                  aria-label="like" 
+                  onClick={handleLike} 
+                  color={liked ? "primary" : "default"}
+                >
+                  <FavoriteIcon />
+                </IconButton>
               </Box>
             </Box>
+          </Box>
         </DialogContent>
       </BootstrapDialog>
     </React.Fragment>
