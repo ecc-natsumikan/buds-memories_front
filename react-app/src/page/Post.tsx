@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import '../page/Post.css';
-import defaultImage from "../image/default.png";
+import defaultImage from "../image/default_picture.png";
 
 const Post: React.FC = () =>{
     const [selectedImage, setSelectedImage] = useState<string | null>(null);

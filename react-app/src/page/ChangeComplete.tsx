@@ -11,7 +11,7 @@ const ChangeComplete: React.FC = () => {
     console.log("Received data:", { name, birthday, selectedImage });
 
     const handleHomeClick = () => {
-        navigate('/');  // ホーム画面に遷移
+        navigate('/Home');  // ホーム画面に遷移
     };
 
     return (

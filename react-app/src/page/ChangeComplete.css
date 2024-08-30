@@ -25,3 +25,18 @@
     border-radius: 5px;
     margin-bottom: 20px;
 }
+.change-complete-container h2{
+    font-size: 30px;
+    color: #000000;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+.change-complete-container h2::after{
+    content: '';
+    display: block;
+    width: 350px;
+    height: 3px;
+    background-color: #f39c12;
+    margin: 10px auto 0;
+}
