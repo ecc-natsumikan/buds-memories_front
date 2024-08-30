@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LogoImage from "../image/ロゴ.png";
 import TextFormField from "../component/Textformfield_component";
 import "./Login.css";

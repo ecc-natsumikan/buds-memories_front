@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+.GrowthContainer {
+    display: flex;
+    height: 100vh; /* ビューポートの高さに合わせる */
+    align-items: flex-start; /* コンテンツを上に寄せる */
+    padding-left: 170px; /* サイドバーの幅に合わせて余白を追加 */
+}
+
+.GrowthContent {
+    flex: 1; /* 残りのスペースを占める */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;  /*要素の余白 ああ*/
+    
+}
+.GrowthContent .tagtitle{
+    color: #525252;
+    text-decoration: underline;
+    text-decoration-color: #F4853B;
+    text-decoration-thickness: 3px; /* 下線の太さ */
+    text-underline-offset: 7px;
+}
+
+.postbutton button{
+    background-color: #F1D15D;
+    color: #525252;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 30px; 
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.postbutton button:hover {
+    background-color: #D8B84A; /* ホバー時の背景色 */
+}
+
+.tagimage img {
+    width: 100%; /* コンテナの幅に合わせて調整 */
+    height: auto; /* 高さを自動調整 */
+    max-width: 600px; /* 最大幅を指定（必要に応じて調整） */
+    max-height: 500px; /* 最大高さを指定（必要に応じて調整） */
+}
+.GrowthContent .everyone_post_title{
+    color: #525252;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+.everyone_post {
+    display: flex;
+    flex-wrap: wrap; /* コンテンツが画面からはみ出る場合に次の行に折り返す */
+    gap: 20px; /* 投稿同士の間隔を調整 */
+    justify-content: center; /* コンテンツを中央揃え */
+    padding: 20px; /* 内側に余白を追加 */
+}

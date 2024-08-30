@@ -1,0 +1,22 @@
+.post_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+.post_container h2{
+    color: #525252;
+    text-decoration: underline;
+    text-decoration-color: #F4853B;
+    text-decoration-thickness: 3px; /* 下線の太さ */
+    text-underline-offset: 7px;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}

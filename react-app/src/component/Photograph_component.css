@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+
+.imageListItem{
+    position: relative;
+    overflow: hidden;
+}
+.imageListItem img{
+    width: 100%;
+    height: 100%;
+}
+.imageListItemBar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.dialog .title{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #F4853B;
+    text-decoration-thickness: 3px; /* 下線の太さ */
+    text-underline-offset: 7px;
+    padding-bottom: 20px;
+}
+.dialog .text{
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+}
+.dialog .tagname{
+    font-family:'Zen Maru Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: #F4853B;
+    text-decoration-thickness: 3px; /* 下線の太さ */
+    text-underline-offset: 7px;
+    padding-bottom: 10px;
+}
+.dialog .tag{
+    background-color: #F4853B;
+    color: white;
+    padding: 0.5em 1em; /* 内側に余白を追加することで、コンテンツに応じてサイズが変わる */
+    text-align: center; /* 横方向の中央揃え */
+    border-radius: 8%;
+    display: inline-flex; /* Flexboxを有効にし、インライン要素として扱う */
+    align-items: center; /* 縦方向の中央揃え */
+    justify-content: center; /* 横方向の中央揃え */
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 1rem; /* フォントサイズを調整 */
+    white-space: nowrap; /* 改行を無効にしてテキストが折り返されないようにする */
+}

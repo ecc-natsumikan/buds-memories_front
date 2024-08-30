@@ -1,0 +1,138 @@
+/* Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+
+.Container {
+    display: flex;
+    height: 100vh; /* ビューポートの高さに合わせる */
+    align-items: flex-start; /* コンテンツを上に寄せる */
+    padding-left: 170px; /* サイドバーの幅に合わせて余白を追加 ああ*/
+}
+
+.Itemcontainer {
+    /* 残りのスペースを占める */
+    padding: 20px;
+    flex: 1; /* 残りのスペースを占める */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4vh;  /*要素の余白 */
+}
+
+.Tagcontainer {
+    background-color: #F6E091;
+    height: auto;
+    width: 60vw;
+    color: #000;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    display: flex;
+    flex-direction: column; /* 見出し（h2）は上部に縦配置されます */
+    align-items: flex-start; /* 左揃えにする */
+    justify-content: flex-start;
+    padding-left: 2vw;
+    padding-bottom: 3vh;
+    box-sizing: border-box; /* パディングが幅に含まれるようにする */
+}
+
+
+.Tagcontainer .tags {
+    display: flex; /* タグを横方向に並べる */
+    gap: 20px; /* タグ間の余白を追加 */
+    flex-wrap: wrap; /* タグが画面幅を超えた場合に折り返す */
+    justify-content: flex-start; /* 左揃えにする */
+
+}
+
+
+.Questcontainer{
+    background-color: #F6E091;
+    height: auto;
+    width: 60vw;
+    color: #000;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    display: flex;
+    flex-direction: column; /* 見出し（h2）は上部に縦配置されます */
+    align-items: flex-start; /* 左揃えにする */
+    justify-content: flex-start;
+    padding-left: 2vw;
+    padding-bottom: 3vh;
+    box-sizing: border-box; /* パディングが幅に含まれるようにする */
+}
+.Badgecontainer{
+    background-color: #F6E091;
+    height: auto;
+    width: 60vw;
+    
+    color: #000;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    display: flex;
+    flex-direction: column; /* 見出し（h2）は上部に縦配置されます */
+    align-items: flex-start; /* 左揃えにする */
+    justify-content: flex-start;
+    padding-left: 2vw;
+    padding-bottom: 3vh;
+    padding-right: 2vw;
+    box-sizing: border-box; /* パディングが幅に含まれるようにする */
+}
+.Postcontainer {
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    background-color: #F6E091;
+    height: auto;
+    width: 60vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Postcontainer .imageListWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4列に設定 */
+    gap: 8px; /* アイテム間のスペース */
+    width: 100%;
+}
+
+/* Home.css */
+.Postbutton, .Likesbutton {
+    cursor: pointer;
+    padding: 8px 4vw;
+    border-radius: 4px;
+    text-decoration: none; /* 初期状態で下線なし */
+    text-decoration-color: transparent; /* 初期状態で下線なし */
+}
+
+.Postbutton {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    text-decoration-color:  transparent; /* 投稿履歴が選択されているときの下線の色 */
+}
+
+.Likesbutton {
+    color: black;
+    font-weight: normal;
+    text-decoration: none;
+    text-decoration-color: transparent;
+}
+
+.Postbutton-active {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #F4853B;
+    text-decoration-thickness: 3px; /* 下線の太さ */
+    text-underline-offset: 7px;
+}
+
+.Likesbutton-active {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #F4853B;
+    text-decoration-thickness: 3px; /* 下線の太さ */
+    text-underline-offset: 5px;
+}
