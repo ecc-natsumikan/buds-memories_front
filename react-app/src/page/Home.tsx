@@ -11,7 +11,7 @@ import Photograph from "../component/Photograph_component";
 const Home: React.FC = () => {
     //借りデータ
     // タグデータの配列 string形式
-    const tagData = ["花火", "旅行", "食事", "祭り","ハロウィーン","お月見"];
+    const tagData = [{tag:"花火",img:'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e'}, {tag:"旅行", img:'http://unsplash.com/photos/U5rMrSI7Pn4'}, {tag:"食事", img:'http://unsplash.com/photos/IGfIGP5ONV0'} , {tag:"祭り", img:'http://unsplash.com/photos/3JICb23kmyo'},{tag:"ハロウィーン", img:'http://unsplash.com/photos/WPh6W1knr-A'},{tag:"お月見", img:'http://unsplash.com/photos/kI2m3SkqLuc'}];
 
     // クエストデータの配列string形式とnumber形式を使用
     const questData = [
@@ -73,10 +73,9 @@ const Home: React.FC = () => {
                     <h2> タグ一覧</h2>
                     <div className="tags">
                     {tagData.map((tag, index) => (
-                            <TagComponent key={index} text={tag} />
+                            <TagComponent key={index} text={tag.tag} img={tag.img}  />
                         ))}
                     </div>
-                    
                 </div>
                 <div className="Questcontainer">
                         <h2>クエスト</h2>
