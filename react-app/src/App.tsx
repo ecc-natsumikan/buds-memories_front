@@ -4,6 +4,7 @@ import Login from "./page/Login";
 import Registration from "./page/Registration";
 import Home from "./page/Home";
 import Growth from "./page/Growth";
+import Post  from "./page/Post";
 
 const App: React.FC = () => {
   return(
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <Route path="/Registration" element={<Registration/>}/>
       <Route path="/Home" element={<Home/>}/>
       <Route path="/Growth" element={<Growth/>}/>
+      <Route path="/Post" element={<Post/>} />
     </Routes>
   );
 }
