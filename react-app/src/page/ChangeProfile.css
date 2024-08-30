@@ -20,7 +20,7 @@
     justify-content: center;
 }
 
-h2 {
+.profile-container h2 {
     font-size: 30px;
     color: #000000;
     margin-bottom: 20px;
@@ -28,7 +28,7 @@ h2 {
     position: relative;
 }
 
-h2::after {
+.profile-container h2::after {
     content: '';
     display: block;
     width: 350px;
