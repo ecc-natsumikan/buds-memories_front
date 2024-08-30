@@ -41,10 +41,7 @@ const ChangeProfile: React.FC = () => {
   };
 
   const handleBackClick = () => {
-    // navigate("/Registration", {
-    //   state: { name, birthday },
-    // });
-    navigate("/");
+    navigate("/Home");
   };
 
   const handleUpdateClick = () => {
@@ -136,7 +133,7 @@ const ChangeProfile: React.FC = () => {
         </button>
         <h3>　</h3>
         <button onClick={handleUpdateClick} className="change-button">
-          次へ
+          変更
         </button>
       </div>
     </div>

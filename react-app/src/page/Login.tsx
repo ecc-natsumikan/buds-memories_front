@@ -32,7 +32,7 @@ const Login = () => {
       // 通常はホーム画面
       // navigate("/nextPage");
       // 一時的にプロフ変更画面に飛ぶために遷移先の変更をしている。
-      navigate("/ChangeProfile");
+      navigate("/Home");
     }
   };
 
