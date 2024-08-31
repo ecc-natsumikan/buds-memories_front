@@ -12,7 +12,7 @@ const Side_Navigation : React.FC<Side_Navigation_Props> =({profileImageUrl})=> {
         { text: "ホーム" ,path:"/Home"},
         { text: "投稿" , path:"/Post"},
         {text:"プロフィール", path:"/ChangeProfile"},
-        {text:"設定", path:"/Setting"}
+        
     ];
 
     return (

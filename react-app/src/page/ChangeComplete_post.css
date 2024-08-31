@@ -1,0 +1,42 @@
+.change-complete-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../image/completeBackground.png');
+    background-size: cover;
+    color: #333;
+}
+
+.change-complete-message {
+    font-size: 2.5rem;
+    margin: 13rem 0;
+}
+
+.home-button {
+    background-color: #f4d03f;
+    height: 60px;
+    color: #000000;
+    padding: 10px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.change-complete-container h2{
+    font-size: 30px;
+    color: #000000;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+.change-complete-container h2::after{
+    content: '';
+    display: block;
+    width: 350px;
+    height: 3px;
+    background-color: #f39c12;
+    margin: 10px auto 0;
+}

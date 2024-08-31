@@ -1,9 +1,9 @@
-.post_container{
+.post_container {
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
+    justify-content: center;
 }
 .post_container h2{
     color: #525252;
@@ -14,9 +14,100 @@
 }
 .content {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
     width: 100%;
     max-width: 800px;
+    padding-top: 80px;
+    
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.post-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 横中央揃え */
+    justify-content: center;
+    padding-left: 5vw;
+}
+
+.textformfield_component{
+    width: 100%;
+    max-width: 400%; /* 入力フィールドの最大幅を設定 */
+    margin-bottom: 20px;
+}
+.comment-area {
+    width: 40vw; /* 入力フィールドの最大幅を設定 */
+    height: 25vh;
+    border: 6px solid #F1D15D;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 1%;
+}
+.comment-area:focus{
+    outline: none;
+    font-size: 2vh;
+    font-weight: bold;
+}
+.comment-area::placeholder{
+    font-size:2vh;
+    color: #525252;
+    font-weight: bold;
+}
+.tag-select-container{
+    border: 6px solid #F1D15D;
+    width: 45vw;
+    height: 20vh;
+    border-radius: 8px;
+    padding: 1%;
+
+}
+.tag-select-title{
+    font-size: 2.5vh;
+    font-weight: bold;
+    color: #525252;
+}
+.tag-select {
+    display: flex;
+    flex-wrap: wrap; /* 横並びにし、領域を超えたら折り返し */
+    justify-content: flex-start; /* タグを左詰めに配置 */
+    overflow: hidden; /* 領域を超えないようにする */
+    max-width: 100%; /* コンテナの最大幅を設定 */
+}
+
+.select-tag {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 10px;
+}
+
+.tag-select-container {
+    border: 6px solid #F1D15D;
+    width: 45vw;
+    height: 20vh;
+    border-radius: 8px;
+    padding: 1%;
+    overflow-y: auto; /* 縦方向にスクロール可能にする */
+}
+.button_group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* ボタン間のスペースを均等に配置 */
+    width: 100%; /* 必要に応じて幅を調整 */
+}
+
+.button_group .back-button {
+    margin-left: 20%; /* 戻るボタンと投稿ボタンの間に余白を追加 */
+
+}
+.button_group .confirm-button{
+    margin-right: 35%;
 }

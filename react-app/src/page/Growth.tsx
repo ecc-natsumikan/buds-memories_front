@@ -4,8 +4,9 @@ import Side_Navigation from "../component/Side_navigation";
 import LogoImage from "../image/ロゴ.png";
 import './Growth.css';
 import Photograph from '../component/Photograph_component'; // 正しいインポート
-
-// GrowthPropsの型定義ああ
+import ReactPlayer from 'react-player';
+import Video from '../image/test.mp4'
+// GrowthPropsの型定義
 interface GrowthProps {
     tagtitle: string;
     tagimage: string;
@@ -26,11 +27,11 @@ const Growth: React.FC = () => {
         navigate('/Post'); // /Postに遷移
     };
     const location = useLocation();
-    const { tagtitle, tagimage } = location.state as GrowthProps;
+    const { tagtitle } = location.state as GrowthProps;
 
     useEffect(() => {
-        console.log('Received tagimage:', tagimage); // 受け取った画像のパスをコンソールに表示
-    }, [tagimage]);
+        console.log('Received tagtitle:', tagtitle); // 受け取ったタイトルをコンソールに表示
+    }, [tagtitle]);
 
     return (
         <div className="GrowthContainer">
@@ -39,7 +40,7 @@ const Growth: React.FC = () => {
                     <h1>{tagtitle}</h1> {/* 渡されたtagtitleを表示 */}
                 </div>
                 <div className='tagimage'>
-                    <img src={tagimage} alt={tagtitle} />
+                    <ReactPlayer url={Video} playing controls loop/>
                 </div>
                 <div className='postbutton' onClick={handleClick}>    
                     <button>投稿ボタン</button>
@@ -48,7 +49,6 @@ const Growth: React.FC = () => {
                     みんなの投稿
                 </div>
                 <div className='everyone_post'>
-                    
                     {PostsData.map((item, index) => (
                         <Photograph
                             key={index}
