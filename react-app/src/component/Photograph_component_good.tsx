@@ -6,9 +6,8 @@ import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
-import FavoriteIcon from '@mui/icons-material/Favorite'; // 追加
 import { ImageListItem, ImageListItemBar } from "@mui/material";
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import './Photograph_component.css';
 
 interface ImageData {
@@ -24,7 +23,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
-const Photograph: React.FC<ImageData> = ({ img, title, tag, text }) => {
+const Photograph_good: React.FC<ImageData> = ({ img, title, tag, text }) => {
   const [open, setOpen] = React.useState(false);
   const [liked, setLiked] = useState(false); // いいね状態管理
 
@@ -35,16 +34,11 @@ const Photograph: React.FC<ImageData> = ({ img, title, tag, text }) => {
   const handleClickClose = () => {
     setOpen(false);
   };
-  //いいねボタンを押したタイミング
-  const handleLike = () => {
-    setLiked(!liked); // いいね状態をトグル
-    if (!liked) {
-      // いいねが新たに追加されたときの処理
-      console.log('いいねしました！');
-    } else {
-      // いいねが取り消されたときの処理
-      console.log('いいねを取り消しました。');
-    }
+
+  // 削除ボタンを押したタイミング
+  const handleDelete = () => {
+    console.log('削除しました！');
+    // 必要な削除処理をここに追加
   };
 
   return (
@@ -128,16 +122,25 @@ const Photograph: React.FC<ImageData> = ({ img, title, tag, text }) => {
               </Box>
               
               <Box mt={2}>
-                <Typography className='good'>
-                  いいね
-                </Typography>
-                <IconButton 
-                  aria-label="like" 
-                  onClick={handleLike} 
-                  sx={{color: liked ? 'red' : 'default'}}
-                >
-                  <FavoriteIcon />
-                </IconButton>
+                {/* テキストボタンを追加 */}
+                <Button
+                    className='deletebutton'
+                    variant="outlined"
+                    onClick={handleDelete}
+                    sx={{
+                        backgroundColor: 'red',
+                        border:'none',
+                        color: 'white',
+                        width: '120px', // ボタンの幅を指定
+                        height: '40px', // ボタンの高さを指定
+                        fontSize: '16px', // フォントサイズを指定
+                        '&:hover': {
+                        backgroundColor: 'darkred', // ホバー時の背景色
+                        },
+                    }}
+                    >
+                    削除
+                </Button>
               </Box>
             </Box>
           </Box>
@@ -147,4 +150,4 @@ const Photograph: React.FC<ImageData> = ({ img, title, tag, text }) => {
   );
 };
 
-export default Photograph;
+export default Photograph_good;

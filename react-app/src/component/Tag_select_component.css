@@ -1,0 +1,22 @@
+.tag-select-name {
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 10px; /* 角を丸める */
+    transition: background-color 0.3s ease; /* 色変更のトランジションを追加 */
+    
+}
+
+.tag-select-name.selected {
+    background-color: #F4853B;
+    color: white;
+    border: 1px solid #F4853B;
+}
+
+
+

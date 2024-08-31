@@ -11,6 +11,7 @@ import ChangeComplete from "./page/ChangeComplete"
 import Home from "./page/Home";
 import Growth from "./page/Growth";
 import Post  from "./page/Post";
+import ChangeComplete_Post from "./page/ChangeComplete_post";
 
 
 const App: React.FC = () => {
@@ -23,6 +24,7 @@ const App: React.FC = () => {
       <Route path="/Complete" element={<Complete/>}/>
       <Route path="/ChangeProfile" element={<ChangeProfile/>}/>
       <Route path="/ChangeComplete" element={<ChangeComplete/>}/>
+      <Route path="/ChangeCompletePost" element={<ChangeComplete_Post/>}/>
       <Route path="/Home" element={<Home/>}/>
       <Route path="/Growth" element={<Growth/>}/>
       <Route path="/Post" element={<Post/>} />

@@ -8,6 +8,9 @@ import { Grid,} from "@mui/material"; // Gridをインポートああ
 import React from "react";
 import { Box, Typography } from '@mui/material';
 import Photograph from "../component/Photograph_component";
+import BadgeImage from "../image/bafge.png";
+import { title } from "process";
+import Photograph_good from "../component/Photograph_component_good";
 const Home: React.FC = () => {
     //借りデータ
     // タグデータの配列 string形式
@@ -15,35 +18,12 @@ const Home: React.FC = () => {
 
     // クエストデータの配列string形式とnumber形式を使用
     const questData = [
-        { questtext: "クエスト内容1", progressvalue: 50 },
-        { questtext: "クエスト内容2", progressvalue: 80 },
-        { questtext: "クエスト内容3", progressvalue: 30 },
+        { questtext: "今月、投稿を10回する", progressvalue: 50 },
+        { questtext: "3日連続投稿する", progressvalue: 80 },
+        { questtext: "投稿を5ついいねする", progressvalue: 30 },
     ];
     const badgeData = [
-        {
-          img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-          title: 'Breakfast',
-        },
-        {
-          img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-          title: 'Burger',
-        },
-        {
-          img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-          title: 'Camera',
-        },
-        {
-          img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-          title: 'Coffee',
-        },
-        {
-          img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-          title: 'Hats',
-        },
-        {
-          img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-          title: 'Honey',
-        },
+        {img:BadgeImage,title :'花火バッジ'}
       ];
     const PostsData =[
         { img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e', title: 'Breakfast',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['食べ物','ハンバーガー'] },
@@ -120,7 +100,7 @@ const Home: React.FC = () => {
                     <Box className="imageListWrapper">
                         {view === 'posts' ? (
                             PostsData.map((item,index) => (
-                                <Photograph
+                                <Photograph_good
                                 key={index}
                                 img={item.img}
                                 title={item.title}
