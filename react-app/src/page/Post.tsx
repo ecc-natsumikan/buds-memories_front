@@ -9,7 +9,7 @@ const Post: React.FC = () => {
     const tagData = [{ tag: "花火" }, { tag: "祭り" }, { tag: "お月見" }];
     const [selectedImage, setSelectedImage] = useState("");
     const [eventName, setEventName] = useState(""); 
-    const [selectedTags, setSelectedTags] = useState<string[]>(); // 選択されたタグを管理
+    const [selectedTags, setSelectedTags] = useState<string[]>([]); // 選択されたタグを管理
     const navigate = useNavigate();
     const location = useLocation();
 
