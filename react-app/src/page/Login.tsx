@@ -46,7 +46,7 @@ const Login = () => {
         <div className="text-field-container">
           <TextFormField
             type={"text"}
-            placeholder={"電話番号(ハイフンなし)/メールアドレス"}
+            placeholder={"電話番号(ハイフンなし)"}
             value={telEmail}
             onChange={(e) => setTelEmail(e.target.value)}
           />

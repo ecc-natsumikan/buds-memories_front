@@ -6,10 +6,10 @@ import TextFormField from "../component/Textformfield_component";
 import Tag_select_component from "../component/Tag_select_component";
 
 const Post: React.FC = () => {
-    const tagData = [{ tag: "花火" }, { tag: "祭り" }, { tag: "お月見" }];
+    const tagData = [{ tag: "花火" }, { tag: "夏祭り" }, { tag: "かき氷" },{ tag: "海" }, { tag: "フェス" }, { tag: "バーベキュー" }];
     const [selectedImage, setSelectedImage] = useState("");
     const [eventName, setEventName] = useState(""); 
-    const [selectedTags, setSelectedTags] = useState<string[]>(); // 選択されたタグを管理
+    const [selectedTags, setSelectedTags] = useState<string[]>([]); // 選択されたタグを管理
     const navigate = useNavigate();
     const location = useLocation();
 

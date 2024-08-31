@@ -11,10 +11,12 @@ import Photograph from "../component/Photograph_component";
 import BadgeImage from "../image/bafge.png";
 import { title } from "process";
 import Photograph_good from "../component/Photograph_component_good";
+import picture from "../image/hanabiLevel2.png";
+
 const Home: React.FC = () => {
     //借りデータ
     // タグデータの配列 string形式
-    const tagData = [{tag:"花火",img:'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e'}, {tag:"旅行", img:'http://unsplash.com/photos/U5rMrSI7Pn4'}, {tag:"食事", img:'http://unsplash.com/photos/IGfIGP5ONV0'} , {tag:"祭り", img:'http://unsplash.com/photos/3JICb23kmyo'},{tag:"ハロウィーン", img:'http://unsplash.com/photos/WPh6W1knr-A'},{tag:"お月見", img:'http://unsplash.com/photos/kI2m3SkqLuc'}];
+    const tagData = [{tag:"花火",img:'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e'}, {tag:"夏祭り", img:'http://unsplash.com/photos/U5rMrSI7Pn4'}, {tag:"かき氷", img:'http://unsplash.com/photos/IGfIGP5ONV0'} , {tag:"海", img:'http://unsplash.com/photos/3JICb23kmyo'},{tag:"フェス", img:'http://unsplash.com/photos/WPh6W1knr-A'},{tag:"バーベキュー", img:'http://unsplash.com/photos/kI2m3SkqLuc'}];
 
     // クエストデータの配列string形式とnumber形式を使用
     const questData = [
@@ -26,20 +28,20 @@ const Home: React.FC = () => {
         {img:BadgeImage,title :'花火バッジ'}
       ];
     const PostsData =[
-        { img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e', title: 'Breakfast',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['食べ物','ハンバーガー'] },
-        { img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d', title: 'Burger',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['食べ物'] },
-        { img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45', title: 'Camera',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['機械'] },
-        { img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c', title: 'Coffee' ,text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['飲み物']},
-        { img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8', title: 'Hats',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['帽子'] },
-        { img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62', title: 'Honey',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['食べ物'] },
+        { img: picture, title: '花火みにいった！',text:'花火はじまった！',tag:['花火','夏まつり'] },
+        { img: picture, title: '花火始まった！',text:'花火！きれい！！',tag:['花火'] },
+        { img: picture, title: '花火たのしい！',text:'花火！きれい！！',tag:['花火'] },
+        { img: picture, title: '花火！' ,text:'花火！きれい！！',tag:['花火']},
+        { img: picture, title: '花火！',text:'花火はじまった！',tag:['花火'] },
+        { img: picture, title: '花火！',text:'花火はじまった！',tag:['食べ物'] },
     ];
     const LikesData = [
-        { img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6', title: 'Basketball',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['スポーツ'] },
-        { img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f', title: 'Fern',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['植物','緑色',] },
-        { img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25', title: 'Mushrooms',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['食べ物','きのこ','苦手' ]},
-        { img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af', title: 'Tomato basil',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['食べ物'] },
-        { img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1', title: 'Sea star',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['動物'] },
-        { img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6', title: 'Bike',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['乗り物'] },
+        { img: picture, title: '花火！',text:'花火はじまった！',tag:['花火','夏まつり'] },
+        { img: picture, title: '花火始まった！',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['花火'] },
+        { img: picture, title: '花火！',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['花火'] },
+        { img: picture, title: '花火！' ,text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['花火']},
+        { img: picture, title: '花火！',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['花火'] },
+        { img: picture, title: '花火！',text:'ぷーさんのはちみつ食べてみたい',tag:['食べ物'] },
     ];
     const [view, setview] = React.useState<'posts' | 'likes'>('posts');
     const handleViewChange = (viewType: 'posts' | 'likes') => {

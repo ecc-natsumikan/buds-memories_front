@@ -5,21 +5,24 @@ import LogoImage from "../image/ロゴ.png";
 import './Growth.css';
 import Photograph from '../component/Photograph_component'; // 正しいインポート
 import ReactPlayer from 'react-player';
-import Video from '../image/test.mp4'
+import Video from '../image/level1.mp4'
+import picture from "../image/hanabiLevel2.png";
+import VideoLevel3 from '../image/level3.mp4'; // level3の動画ファイル
+
 // GrowthPropsの型定義
 interface GrowthProps {
     tagtitle: string;
     tagimage: string;
+    videoLevel: 'level2' | 'level3'; // 動画のレベルを指定
 }
 
 const Growth: React.FC = () => {
     const PostsData = [
-        { img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e', title: 'Breakfast', text: 'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト', tag: ['食べ物', 'ハンバーガー'] },
-        { img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d', title: 'Burger', text: 'テストテスト...', tag: ['食べ物'] },
-        { img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45', title: 'Camera', text: 'テストテスト...', tag: ['機械'] },
-        { img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c', title: 'Coffee', text: 'テストテスト...', tag: ['飲み物'] },
-        { img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8', title: 'Hats', text: 'テストテスト...', tag: ['帽子'] },
-        { img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62', title: 'Honey', text: 'テストテスト...', tag: ['食べ物'] },
+        { img: picture, title: '花火！',text:'花火はじまった！',tag:['花火','夏まつり'] },
+        { img: picture, title: '花火始まった！',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['花火'] },
+        { img: picture, title: '花火！',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['花火'] },
+        { img: picture, title: '花火！' ,text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['花火']},
+        { img: picture, title: '花火！',text:'テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト',tag:['花火'] },
     ];
 
     const navigate = useNavigate();
@@ -27,7 +30,11 @@ const Growth: React.FC = () => {
         navigate('/Post'); // /Postに遷移
     };
     const location = useLocation();
-    const { tagtitle } = location.state as GrowthProps;
+    const { tagtitle, videoLevel } = location.state as GrowthProps;
+
+    // 動画のURLを決定
+    const videoUrl = videoLevel === 'level3' ? VideoLevel3 : Video;
+
 
     useEffect(() => {
         console.log('Received tagtitle:', tagtitle); // 受け取ったタイトルをコンソールに表示
@@ -40,9 +47,9 @@ const Growth: React.FC = () => {
                     <h1>{tagtitle}</h1> {/* 渡されたtagtitleを表示 */}
                 </div>
                 <div className='tagimage'>
-                    <ReactPlayer url={Video} playing controls loop/>
+                    <ReactPlayer url={videoUrl} playing controls loop/>
                 </div>
-                <div className='postbutton' onClick={handleClick}>    
+                <div className='postbutton' onClick={handleClick}>
                     <button>投稿ボタン</button>
                 </div>
                 <div className='everyone_post_title'>

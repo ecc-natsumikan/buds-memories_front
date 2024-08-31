@@ -26,7 +26,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 
 const Photograph: React.FC<ImageData> = ({ img, title, tag, text }) => {
   const [open, setOpen] = React.useState(false);
-  const [liked, setLiked] = useState(false); // いいね状態管理
+  const [liked, setLiked] = useState(true); // いいね状態管理
 
   const handleClickOpen = () => {
     setOpen(true);

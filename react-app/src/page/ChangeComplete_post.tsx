@@ -11,14 +11,14 @@ const ChangeComplete_Post: React.FC = () => {
     console.log("Received data:", { name, birthday, selectedImage });
 
     const handleHomeClick = () => {
-        navigate('/Home');  // ホーム画面に遷移
+        navigate('/Growth', { state: { videoLevel: 'level3' } });  // 状態を渡してGrowthに遷移
     };
 
     return (
         <div className="change-complete-container">
             <h2 className="complete-title">投稿完了</h2>
             <p className="change-complete-message">思い出の投稿が完了しました</p>
-            <button onClick={handleHomeClick} className="home-button">ホームへ</button>
+            <button onClick={handleHomeClick} className="home-button">育成画面へ</button>
         </div>
     );
 };
